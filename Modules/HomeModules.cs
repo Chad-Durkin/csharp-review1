@@ -22,7 +22,7 @@ namespace AddressBookApp
         Request.Form["contact-phone-number"]);
         return View["contact_new.cshtml", newContact];
       };
-      Get["/contact/{id}"] = parameters => {
+      Get["/contacts/{id}"] = parameters => {
         var contact = Contact.FindContact(parameters.id);
         return View["contact_view.cshtml", contact];
       };
