@@ -1,0 +1,16 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="createContact">
+  <div class="jumbotron">
+    <h1>You created a contact</h1>
+  </div>
+
+  <ul>
+    <h2>@Model.GetName()</h2>
+    <li>@Model.GetAddress()</li>
+    <li>@Model.GetPhoneNumber()</li>
+  </ul>
+
+</div>
