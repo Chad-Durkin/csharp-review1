@@ -1,4 +1,4 @@
-using System.Collection.Generic;
+using System.Collections.Generic;
 
 namespace AddressBook.Objects
 {
@@ -6,11 +6,11 @@ namespace AddressBook.Objects
   {
     private string _name;
     private string _address;
-    private int _phoneNumber;
+    private string _phoneNumber;
     private int _id;
     private static List<Contact> _contacts = new List<Contact> {};
 
-    public Contact(string name, string address, int phoneNumber)
+    public Contact(string name, string address, string phoneNumber)
     {
       _name = name;
       _address = address;
@@ -39,12 +39,12 @@ namespace AddressBook.Objects
       _address = address;
     }
 
-    public int GetPhoneNumber()
+    public string GetPhoneNumber()
     {
       return _phoneNumber;
     }
 
-    public void SetPhoneNumber(int phoneNumber)
+    public void SetPhoneNumber(string phoneNumber)
     {
       _phoneNumber = phoneNumber;
     }
