@@ -7,13 +7,16 @@
     <h1>Address Book</h1>
   </div>
 
+@if( @model.Count() == 0)
+{
+  <h1>No contacts at the moment</h1>
+}
 @foreach(var contact in Model)
 {
   <li class="contactList"><a href="/contacts/@contact.GetId()">@contact.GetName()</a></li>
 }
 
-
-  <h2><a href="/contact/new">Add a new contact</a></h2>
+  <h2><a href="/contact/form">Add a new contact</a></h2>
 
   <form class="delete" action="/contacts/clear" method="post">
     <h2><button type="submit" name="clear-contacts"></button>Delete contacts</h2>

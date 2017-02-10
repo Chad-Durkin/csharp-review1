@@ -1,0 +1,30 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="createContact">
+  <div class="jumbotron">
+    <h1>Fill out the contanct information</h1>
+  </div>
+
+<form action="/contact/new" method="post">
+  <h2>Name</h2>
+  <label for="contact-first-name">First Name:</label>
+  <input type="text" name="contact-first-name">
+  <label for="contact-last-name">Last Name:</label>
+  <input type="text" name="contact-last-name">
+  <h2>Address</h2>
+  <label for="contact-city">City:</label>
+  <input type="text" name="contact-city">
+  <label for="contact-state">State:</label>
+  <input type="text" name="contact-state">
+  <label for="contact-street">Street Address:</label>
+  <input type="text" name="contact-street">
+  <label for="contact-zipcode">Zipcode:</label>
+  <input type="number" name="contact-zipcode">
+  <h2>Phone Number</h2>
+  <label for="contact-phone-number">Phone Number:</label>
+  <input type="number" name="contact-phone-number">
+</form>
+
+</div>
