@@ -9,11 +9,11 @@
 
   @if ( @Model.Count == 0)
   {
-    <h1>No contacts at the moment</h1>
+    <h1><strong><em>No contacts at the moment</em></strong></h1>
   }
   else
   {
-    <h1>Contacts</h1>
+    <h1><strong><em>Contacts</em></strong></h1>
   }
 
   <ol class="contactList">
@@ -27,6 +27,13 @@
   <h2><a href="/contact/form">Add a new contact</a></h2>
 
   <form class="delete" action="/contacts/clear" method="post">
-    <h2><button type="submit" name="clear-contacts">Delete Contacts</button></h2>
+    <h2>Delete A Contact</h2>
+    <label for="delete-contant-name">Enter the name of the contact you wish to delete</label>
+    <input type="text" name="delete-contact-name">
+    <button type="submit" name="delete-contact">Delete Contact</button>
+  </form>
+  <form action="/contacts/clear/all" method="post">
+    <h2>OR</h2>
+    <button type="submit" name="delete-all-contacts">Delete All Contacts</button>
   </form>
 </div>

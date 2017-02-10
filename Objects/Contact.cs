@@ -68,5 +68,16 @@ namespace AddressBook.Objects
     {
       _contacts.Clear();
     }
+
+    public static void DeleteContact(string name)
+    {
+      for(var index = 0; index < _contacts.Count; index++)
+      {
+        if(_contacts[index].GetName().ToLower() == name.ToLower())
+        {
+          _contacts.RemoveAt(index);
+        }
+      }
+    }
   }
 }

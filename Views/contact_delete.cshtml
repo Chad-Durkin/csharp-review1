@@ -1,0 +1,18 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="createContact">
+  <div class="jumbotron">
+    @if (@Model.Count == 0)
+    {
+      <h1>You just deleted all of your contacts</h1>
+    }
+    else
+    {
+      <h1>You deleted one of your contacts</h1>
+    }
+  </div>
+
+<h2><a href="/">Home</a></h2>
+</div>

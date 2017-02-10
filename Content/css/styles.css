@@ -1,7 +1,28 @@
 body {
   background-color: #5e7c73;
+  color: #dce5e2;
 }
 
+.jumbotron {
+  background-color: #dce5e2;
+  color: #5e7c73;
+}
 .contactList {
-  font-size: 35px;
+  font-size: 30px;
+}
+
+.delete {
+  margin-top: 100px;
+}
+
+button {
+  background-color: #d8fff3;
+  color: #5e7c73;
+}
+
+a {
+  color: #dce5e2;
+}
+a:hover {
+  background-color: yellow;
 }

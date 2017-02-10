@@ -26,6 +26,16 @@ namespace AddressBookApp
         var contact = Contact.FindContact(parameters.id);
         return View["contact_view.cshtml", contact];
       };
+      Post["/contacts/clear"] = _ => {
+        Contact.DeleteContact(Request.Form["delete-contact-name"]);
+        List<Contact> contactList = Contact.GetAll();
+        return View["contact_delete.cshtml", contactList];
+      };
+      Post["/contacts/clear/all"] = _ => {
+        Contact.ClearAll();
+        List<Contact> contactList = Contact.GetAll();
+        return View["contact_delete.cshtml", contactList];
+      };
     }
   }
 }
