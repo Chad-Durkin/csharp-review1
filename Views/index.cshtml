@@ -6,9 +6,16 @@
   <div class="jumbotron">
     <h1>Address Book</h1>
   </div>
-  <h1><a href="/contact/new">Add a new contact</a></h1>
+
+@foreach(var contact in Model)
+{
+  <li class="contactList"><a href="/contacts/@contact.GetId()">@contact.GetName()</a></li>
+}
+
+
+  <h2><a href="/contact/new">Add a new contact</a></h2>
 
   <form class="delete" action="/contacts/clear" method="post">
-    <h1><button type="submit" name="clear-contacts"></button>Delete contacts</h1>
+    <h2><button type="submit" name="clear-contacts"></button>Delete contacts</h2>
   </form>
 </div>
