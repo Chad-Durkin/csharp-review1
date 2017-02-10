@@ -1,3 +1,11 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
+
+<div class="index">
+  <h1><a href="/contact/new">Add a new contact</a></h1>
+
+  <form class="delete" action="/contacts/clear" method="post">
+    <h1><button type="submit" name="clear-contacts"></button>Delete contacts</h1>
+  </form>
+</div>
