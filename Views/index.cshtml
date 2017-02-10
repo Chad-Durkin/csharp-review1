@@ -29,11 +29,7 @@
   <form class="delete" action="/contacts/clear" method="post">
     <h2>Delete A Contact</h2>
     <label for="delete-contant-name">Enter the name of the contact you wish to delete</label>
-    <input type="text" name="delete-contact-name">
+    <input type="text" name="delete-contact-name" required>
     <button type="submit" name="delete-contact">Delete Contact</button>
-  </form>
-  <form action="/contacts/clear/all" method="post">
-    <h2>OR</h2>
-    <button type="submit" name="delete-all-contacts">Delete All Contacts</button>
   </form>
 </div>

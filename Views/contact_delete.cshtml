@@ -2,11 +2,11 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<div class="createContact">
+<div class="deleteContact">
   <div class="jumbotron">
     @if (@Model.Count == 0)
     {
-      <h1>You just deleted all of your contacts</h1>
+      <h1>Address book cleared!</h1>
     }
     else
     {
@@ -14,5 +14,5 @@
     }
   </div>
 
-<h2><a href="/">Home</a></h2>
+  <h2><a href="/">Home</a></h2>
 </div>

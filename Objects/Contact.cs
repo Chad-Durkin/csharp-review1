@@ -79,5 +79,17 @@ namespace AddressBook.Objects
         }
       }
     }
+
+    public static bool CheckContacts(string name)
+    {
+      for(var index = 0; index < _contacts.Count; index++)
+      {
+        if(_contacts[index].GetName().ToLower() == name.ToLower())
+        {
+          return true;
+        }
+      }
+      return false;
+    }
   }
 }

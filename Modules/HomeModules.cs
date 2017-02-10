@@ -27,14 +27,14 @@ namespace AddressBookApp
         return View["contact_view.cshtml", contact];
       };
       Post["/contacts/clear"] = _ => {
-        Contact.DeleteContact(Request.Form["delete-contact-name"]);
+        if(Contact.CheckContacts(Request.Form["delete-contact-name"]))
+        {
+          Contact.DeleteContact(Request.Form["delete-contact-name"]);
+          List<Contact> editedContactList = Contact.GetAll();
+          return View["contact_delete.cshtml", editedContactList];
+        }
         List<Contact> contactList = Contact.GetAll();
-        return View["contact_delete.cshtml", contactList];
-      };
-      Post["/contacts/clear/all"] = _ => {
-        Contact.ClearAll();
-        List<Contact> contactList = Contact.GetAll();
-        return View["contact_delete.cshtml", contactList];
+        return View["index.cshtml", contactList];
       };
     }
   }

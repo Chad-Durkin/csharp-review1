@@ -6,23 +6,38 @@ body {
 .jumbotron {
   background-color: #dce5e2;
   color: #5e7c73;
+  text-align: center;
 }
+
 .contactList {
   font-size: 30px;
 }
 
 .delete {
+  padding-top: 5px !important;
+  padding: 20px;
   margin-top: 100px;
+  border: 5px white solid;
+  width: 350px;
+}
+.delete button {
+  padding: 10px;
+}
+
+input {
+  color: #5e7c73;
 }
 
 button {
   background-color: #d8fff3;
   color: #5e7c73;
+  padding: 10px;
 }
 
 a {
   color: #dce5e2;
 }
+
 a:hover {
   background-color: yellow;
 }
