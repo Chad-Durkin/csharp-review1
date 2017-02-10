@@ -9,21 +9,6 @@ body {
   text-align: center;
 }
 
-.contactList {
-  font-size: 30px;
-}
-
-.delete {
-  padding-top: 5px !important;
-  padding: 20px;
-  margin-top: 100px;
-  border: 5px white solid;
-  width: 350px;
-}
-.delete button {
-  padding: 10px;
-}
-
 input {
   color: #5e7c73;
 }
@@ -40,4 +25,30 @@ a {
 
 a:hover {
   background-color: yellow;
+}
+
+
+.contactList {
+  font-size: 30px;
+}
+
+.delete {
+  padding-top: 5px !important;
+  padding: 20px;
+  margin-top: 100px;
+  border: 5px white solid;
+  width: 350px;
+}
+.delete button {
+  padding: 10px;
+}
+
+.contactInfo {
+  padding: 20px;
+  border: 5px white solid;
+  width: 350px;
+}
+
+.contactInfo h2{
+  text-align: center;
 }
