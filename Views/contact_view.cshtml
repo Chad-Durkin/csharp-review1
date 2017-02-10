@@ -1,0 +1,16 @@
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<div class="createContact">
+  <div class="jumbotron">
+    <h1>@Model.GetName()'s Contact Information'</h1>
+  </div>
+
+  <ul>
+    <li>@Model.GetAddress()</li>
+    <li>@Model.GetPhoneNumber()</li>
+  </ul>
+
+<h2><a href="/">Home</a></h2>
+</div>
