@@ -13,7 +13,13 @@ namespace AddressBookApp
       Get["/contact/form"] = _ => {
         return View["contact_new.cshtml"];
       }
-      Post["/contact/new"]
+      Post["/contact/new"] = _ => {
+        Contact newContact = Contact(
+        Request.Form["contact-name"],
+        (Request.Form["contact-city"] + ", " + Request.Form["contact-state"] + " " + Request.Form["contact-street"] + ", " + Request.Form["contact-zipcode"]),
+        Request.Form["contact-phone-number"]);
+        return View["contact_new.cshtml", newContact]
+      }
 
     }
   }
